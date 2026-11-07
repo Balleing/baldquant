@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="BaldQuant mark: a dome with a curved shine">
+  <!-- Dome: half circle, centre (50,68), r 36. Shine: arc of r 27 from 160° to 112°, cut out. -->
+  <mask id="shine">
+    <rect width="100" height="100" fill="#fff"/>
+    <path d="M24.63 58.77 A27 27 0 0 1 39.89 42.97" fill="none" stroke="#000" stroke-width="5.5" stroke-linecap="round"/>
+  </mask>
+  <path d="M14 68 A36 36 0 0 1 86 68 Z" fill="#B79CFF" mask="url(#shine)"/>
+</svg>

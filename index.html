@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>BaldQuant · Peter's trading tools</title>
+  <meta name="description" content="Small Solana and Telegram bot jobs at fixed prices: wallet alert bots for €300, bot fixes for €150, token holder lists for €100. No wallet keys needed.">
+  <meta name="theme-color" content="#17121F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BaldQuant · I trade crypto with tools I wrote">
+  <meta property="og:description" content="A pump.fun graduation scanner and a gap-free Binance order book recorder.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#prices">Skip to prices</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="BaldQuant, back to top"><img src="mark.svg" alt="" width="34" height="34"><span><b>Bald</b>Quant</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#prices">Prices</a>
+      <a href="#work">Work</a>
+      <a href="https://github.com/Balleing" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+      <a class="nav-cta" href="https://x.com/BaldQuant" rel="noopener" aria-label="DM me on X">DM me <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-stage" aria-hidden="true">
+        <canvas id="curve-canvas"></canvas>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Peter · Latvia · taking small jobs</p>
+        <h1 id="hero-title">I trade crypto <em>with tools I&nbsp;wrote.</em></h1>
+        <p class="hero-lede">Now I build them for other people too: wallet alert bots, bot fixes and holder lists. Fixed prices from €100, done in 72 hours or less, and I never need your wallet keys.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#prices">See prices</a>
+          <a class="btn btn-ghost" href="https://github.com/Balleing" rel="noopener">My GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <aside class="sim-hud" aria-label="About the animation">
+        <p class="hud-title"><span class="live-dot" aria-hidden="true"></span>bonding-curve sim</p>
+        <dl class="hud-stats">
+          <div><dt>on curve</dt><dd data-hud="onCurve">—</dd></div>
+          <div><dt>graduated</dt><dd data-hud="graduated">0</dd></div>
+          <div><dt>last score</dt><dd data-hud="lastScore">—</dd></div>
+        </dl>
+        <p class="hud-note">Every dot is a token on a bonding curve. Most run out of buyers and slide back down. A few reach the ring and graduate, coloured by score.</p>
+      </aside>
+    </section>
+
+    <section id="prices" class="jobs" aria-labelledby="jobs-title">
+      <div class="section-head">
+        <h2 id="jobs-title">Small jobs, fixed prices</h2>
+        <p class="section-count">Under €300: paid up front · €300+: half up front</p>
+      </div>
+
+      <ol class="job-list">
+        <li class="job">
+          <div class="job-main">
+            <h3>Wallet alert bot</h3>
+            <p>Every buy and sell from up to 20 wallets, posted in your Telegram group with the size, market cap and a chart link.</p>
+          </div>
+          <dl class="job-terms">
+            <div><dt>Live in</dt><dd>72 hours</dd></div>
+            <div><dt>Includes</dt><dd>First month of hosting</dd></div>
+            <div><dt>After that</dt><dd>€49 a month, or run it yourself</dd></div>
+          </dl>
+          <p class="job-price"><span class="job-currency">€</span>300</p>
+        </li>
+        <li class="job">
+          <div class="job-main">
+            <h3>Bot fix and redeploy</h3>
+            <p>Your Telegram or Discord bot crashed, or never ran at all? I get it running on a server with auto-restart and logs.</p>
+          </div>
+          <dl class="job-terms">
+            <div><dt>Running in</dt><dd>48 hours</dd></div>
+            <div><dt>Covers</dt><dd>One bot, Python or Node</dd></div>
+            <div><dt>Can't be fixed?</dt><dd>You get your money back</dd></div>
+          </dl>
+          <p class="job-price"><span class="job-currency">€</span>150</p>
+        </li>
+        <li class="job">
+          <div class="job-main">
+            <h3>Token holder list</h3>
+            <p>Every holder of a Solana token at the time you pick, as a CSV, plus the script so you can run it again.</p>
+          </div>
+          <dl class="job-terms">
+            <div><dt>Delivered in</dt><dd>48 hours</dd></div>
+            <div><dt>Good for</dt><dd>Airdrops, snapshots, whale checks</dd></div>
+            <div><dt>You get</dt><dd>CSV file and the script</dd></div>
+          </dl>
+          <p class="job-price"><span class="job-currency">€</span>100</p>
+        </li>
+        <li class="job job-custom">
+          <div class="job-main">
+            <h3>Something else?</h3>
+            <p>A different alert, a scraper, a Telegram command bot, a small dashboard. Tell me what you need and I'll quote one fixed price before any work starts.</p>
+          </div>
+          <dl class="job-terms">
+            <div><dt>Usually</dt><dd>€150–500</dd></div>
+            <div><dt>Done in</dt><dd>5 days or less</dd></div>
+            <div><dt>Not taken</dt><dd>Trading bots, or anything that needs your wallet keys</dd></div>
+          </dl>
+          <p class="job-price job-quote">Quote</p>
+        </li>
+      </ol>
+
+      <ol class="steps" aria-label="How a job works">
+        <li><b>Send the job.</b> DM <a href="https://x.com/BaldQuant" rel="noopener">@BaldQuant</a> on X with a wallet list, your bot's repo, a token address, or what you need built.</li>
+        <li><b>Pay.</b> The full price for jobs under €300, half for bigger ones. USDC or SOL. Work starts once it lands.</li>
+        <li><b>Check it works.</b> On bigger jobs, then pay the rest. No wallet keys needed at any point.</li>
+      </ol>
+    </section>
+
+    <section id="work" class="work" aria-labelledby="work-title">
+      <div class="section-head">
+        <h2 id="work-title">What I've built</h2>
+        <p class="section-count">4 projects</p>
+      </div>
+
+      <article class="project project-alerts" aria-labelledby="alerts-title">
+        <div class="project-meta">
+          <span class="project-index" aria-hidden="true">01</span>
+          <p class="tags">Solana · Telegram · Python · asyncio</p>
+        </div>
+        <div class="project-body">
+          <h3 id="alerts-title">Wallet alert bot</h3>
+          <p class="project-lede">The bot behind the €300 job. It checks your wallet list every 5 seconds and posts each buy and sell to Telegram.</p>
+          <dl class="features">
+            <div><dt>pump.fun, PumpSwap, Jupiter</dt><dd>Tested on real mainnet trades from all three.</dd></div>
+            <div><dt>Read-only</dt><dd>It never needs a wallet key. You make the Telegram bot and can revoke it.</dd></div>
+            <div><dt>Safe with weird token names</dt><dd>Names from the chain are cleaned before they reach your group.</dd></div>
+            <div><dt>No spam on restart</dt><dd>It remembers where it stopped, so a reboot never floods the chat.</dd></div>
+          </dl>
+          <p class="project-status"><span class="status-dot" aria-hidden="true"></span>Private repo · demo on request</p>
+        </div>
+        <figure class="chat-figure">
+          <div class="chat" data-tilt role="img" aria-label="Two Telegram alerts: Whale 1 bought 3.65 million SQRL for 1.65 SOL, then sold 6.65 million SQRL for 3.07 SOL, each with market cap, liquidity and links.">
+            <p class="chat-head"><img class="chat-avatar" src="mark-on-dark.svg" alt="" width="34" height="34"><span><b>Wallet Alerts</b><small>bot</small></span></p>
+            <div class="chat-msg">
+              <p>🟢 <b>Whale 1</b> bought <b>3.65M SQRL</b> for <b>1.65 SOL</b></p>
+              <p>Squirrelcoin</p>
+              <p>MC $44.6k · Liq $59.6k</p>
+              <p><code>D3jc7pxU…6VFxhgf</code></p>
+              <p class="chat-links"><span>Tx</span> · <span>Chart</span> · <span>Wallet</span></p>
+              <time>00:35</time>
+            </div>
+            <div class="chat-msg">
+              <p>🔴 <b>Whale 1</b> sold <b>6.65M SQRL</b> for <b>3.07 SOL</b></p>
+              <p>Squirrelcoin</p>
+              <p>MC $44.6k · Liq $59.6k</p>
+              <p><code>D3jc7pxU…6VFxhgf</code></p>
+              <p class="chat-links"><span>Tx</span> · <span>Chart</span> · <span>Wallet</span></p>
+              <time>00:35</time>
+            </div>
+          </div>
+          <figcaption>Real alerts from a test run on 7 November. The wallet label is changed.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project project-scanner" aria-labelledby="scanner-title">
+        <div class="project-meta">
+          <span class="project-index" aria-hidden="true">02</span>
+          <p class="tags">Solana · Python · asyncio · Telegram</p>
+        </div>
+        <div class="project-body">
+          <h3 id="scanner-title">solana-meme-scanner</h3>
+          <p class="project-lede">Most pump.fun tokens never finish their bonding curve. This scanner spots the ones that do and scores them before they hit Telegram.</p>
+          <dl class="features">
+            <div><dt>Telegram alerts</dt><dd>Every graduation gets a score before it lands in the channel.</dd></div>
+            <div><dt>Paid tier, checked on-chain</dt><dd>Pay in SOL. The bot reads the transaction on-chain before it lets you in.</dd></div>
+            <div><dt>Live dashboard</dt><dd>The last 30 minutes of graduations on one screen. Hide anything under your liquidity floor.</dd></div>
+            <div><dt>Backtester</dt><dd>Run a scoring rule over past graduations before you trust it with real money.</dd></div>
+          </dl>
+          <p class="project-status"><span class="status-dot" aria-hidden="true"></span>Repo goes public soon</p>
+        </div>
+        <figure class="shot">
+          <div class="shot-tilt" data-tilt>
+            <img src="dashboard.png" width="2560" height="1720" loading="lazy" decoding="async"
+                 alt="BaldQuant scanner dashboard: a bar chart of 13 tokens graduated in the last 30 minutes, coloured by score, above a table listing each token's score, liquidity, price and age.">
+          </div>
+          <figcaption>The dashboard. Token names here are test data.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project project-l2" aria-labelledby="l2-title">
+        <div class="project-meta">
+          <span class="project-index" aria-hidden="true">03</span>
+          <p class="tags">Binance USDT-M futures · L2 · Python</p>
+        </div>
+        <div class="project-body">
+          <h3 id="l2-title">crypto-l2-capture</h3>
+          <p class="project-lede">Records the Binance futures order book with no gaps. If the book desyncs, it stops instead of quietly writing bad data.</p>
+          <dl class="features">
+            <div><dt>Stops on a gap</dt><dd>Every update has to follow the one before it. Miss one and capture stops.</dd></div>
+            <div><dt>Runs on your machine</dt><dd>Self-hosted. Bring your own API key.</dd></div>
+            <div><dt>MIT licence</dt><dd>Free to use and change.</dd></div>
+          </dl>
+          <div class="project-links">
+            <a class="btn btn-primary" href="https://github.com/Balleing/crypto-l2-capture" rel="noopener">Browse the code <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-ghost" href="https://baldquant.pages.dev" rel="noopener">Project page <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <figure class="book-figure">
+          <div class="book" data-orderbook aria-hidden="true"></div>
+          <figcaption>Not live data, just an illustration. The real recorder checks every update ID and stops on a gap.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project project-research" aria-labelledby="research-title">
+        <div class="project-meta">
+          <span class="project-index" aria-hidden="true">04</span>
+          <p class="tags">pump.fun · data · Python</p>
+        </div>
+        <div class="project-body">
+          <h3 id="research-title">pump.fun launch research</h3>
+          <p class="project-lede">I pulled every pump.fun launch from 18 to 31 October and the first 10 minutes of trades on each. Filter and scoring ideas get tested on it before they go into a bot.</p>
+        </div>
+        <dl class="stats">
+          <div><dt>launches</dt><dd>641,516</dd></div>
+          <div><dt>graduated</dt><dd>13,198</dd></div>
+          <div><dt>graduation rate</dt><dd>2.1%</dd></div>
+        </dl>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-mark" aria-hidden="true">BaldQuant</p>
+    <div class="footer-row">
+      <p>Made in Latvia by Peter.</p>
+      <p class="footer-links">
+        <a href="https://x.com/BaldQuant" rel="noopener">x.com/BaldQuant <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/Balleing" rel="noopener">github.com/Balleing <span aria-hidden="true">↗</span></a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
